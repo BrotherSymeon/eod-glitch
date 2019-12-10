@@ -286,11 +286,10 @@
     <script src="/js/dataHelpers.js"></script>
    
   <script>
-    $( document ).ready(function() {
-      //console.log("running VDOT.EOD");
-
-      //VDOT.EOD.init();
-    });
+   
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js', {scope: '/'})
+      }
 
   </script>
     

@@ -191,6 +191,11 @@ var snowLayer = L.tileLayer('https://tile.openweathermap.org/map/wind_new/{z}/{x
     maxZoom: 18
 });
 
+var trafficLayer = L.tileLayer('https://tiles.ibi511.com/Geoservice/GetTrafficTile?x={x}&amp;y={y}&amp;z={z}',{
+	attribution: 'Map Data',
+	maxZoom:10
+});
+
 
 var highImpactIncidentsLayer = L.geoJson(null);
 var highImpactIncidents = L.geoJson(null, {
@@ -555,7 +560,8 @@ var groupedOverlays = {
   "Reference": {
     "<img src='http://icons.wxug.com/i/c/i/nt_cloudy.gif' width='24' height='28'>&nbsp;Clouds": cloudLayer,
     "<img src='http://icons.wxug.com/i/c/i/nt_chancerain.gif' width='24' height='28'>&nbsp;Rain": rainLayer,
-    "<img src='http://icons.wxug.com/i/c/i/nt_flurries.gif' width='24' height='28'>&nbsp;Wind": snowLayer
+    "<img src='http://icons.wxug.com/i/c/i/nt_flurries.gif' width='24' height='28'>&nbsp;Wind": snowLayer,
+"<img src='http://icons.wxug.com/i/c/i/nt_flurries.gif' width='24' height='28'>&nbsp;Wind": trafficLayer
     
   }
 };
